@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/header', {title, meta, cacheBuster: new Date().getTime()}); %>
+
+  <body class="<%- id %>">
+    <header>
+      <div class="content-wrap inner">
+        <div class="logo">
+          <a href="/">
+            <svg class="icon">
+              <use xlink:href="#tanka-logo" />
+            </svg>
+          </a>
+        </div>
+        <div class="nav">
+          <nav>
+          </nav>
+        </div>
+        <button class="mobile-nav-btn">
+          <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke-width="2" stroke="currentColor">
+              <line x1="5" x2="27" y1="8" y2="8" />
+              <line x1="5" x2="27" y1="16" y2="16" />
+              <line x1="5" x2="27" y1="24" y2="24" />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="bg"></div>
+    </header>
+    <div class="main">
+      <%- body %>
+        <%- include('partials/footer'); %>
+    </div>
+  </body>
+
+</html>

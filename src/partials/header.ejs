@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="<%- meta.keywords %>" />
+  <title>
+    <%- title %>
+  </title>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "<%- process.env.FIREBASE_apiKey %>",
+      authDomain: "<%- process.env.FIREBASE_authDomain %>",
+      databaseURL: "<%- process.env.FIREBASE_databaseURL %>",
+      projectId: "<%- process.env.FIREBASE_projectId %>",
+      storageBucket: "<%- process.env.FIREBASE_storageBucket %>",
+      messagingSenderId: "<%- process.env.FIREBASE_messagingSenderId %>"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/2.1.3/cash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/main.min.js?r=<%- cacheBuster %>"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+  <link href="/css/style.min.css?r=<%- cacheBuster %>" rel="stylesheet" />
+</head>
